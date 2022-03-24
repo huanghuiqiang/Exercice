@@ -1,5 +1,5 @@
 
-import { connect } from 'react-redux';
+import { connect } from './react-redux';
 import { increment, decrement, reset } from './action';
 
 function App(props) {
