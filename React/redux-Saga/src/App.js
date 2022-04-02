@@ -1,11 +1,24 @@
+import React from 'react';
+import { connect } from 'react-redux';
 
+function App(props) {
+  const { dispatch, userInfo } = props;
 
-function App() {
+  const getUserInfo = () => {
+    dispatch({ type: 'FETCH_USER_INFO' })
+  }
+
   return (
-    <div>
-      hello,world
+    <div className="App">
+      <button onClick={getUserInfo}>Get User Info</button>
+      <br></br>
+      {userInfo && JSON.stringify(userInfo)}
     </div>
   );
 }
 
-export default App;
+const matStateToProps = (state) => ({
+  userInfo: state.userInfo
+})
+
+export default connect(matStateToProps)(App);
