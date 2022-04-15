@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "quicktype": "quicktype https://api.github.com/ -o Weather.ts --runtime-typecheck"
+  },
+  "dependencies": {
+    "quicktype": "^15.0.261"
+  }
+}
